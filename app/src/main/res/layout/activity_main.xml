@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingTop="35dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTipoLanc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/tipo"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:text="@string/detalhe"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipoLanc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTipoLanc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/sTpDetalhe"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_spinner_background"
+        app:layout_constraintBottom_toBottomOf="@+id/sTpLancamento"
+        app:layout_constraintStart_toStartOf="@+id/tvDetalhe" />
+
+    <Spinner
+        android:id="@+id/sTpLancamento"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_spinner_background"
+        app:layout_constraintStart_toStartOf="@+id/tvTipoLanc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipoLanc" />
+
+    <TextView
+        android:id="@+id/tvValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/valor"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTipoLanc"
+        app:layout_constraintTop_toBottomOf="@+id/sTpLancamento" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="193dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/insira_um_valor"
+        android:inputType="number|numberDecimal"
+        android:textColor="@color/colorTextPrimary"
+        android:textColorHint="@color/colorTextSecondary"
+        android:backgroundTint="@color/colorInputAccent"
+        app:layout_constraintStart_toStartOf="@+id/tvValor"
+        app:layout_constraintTop_toBottomOf="@+id/tvValor" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="193dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/insira_uma_data"
+        android:inputType="datetime|date"
+        android:textColor="@color/colorTextPrimary"
+        android:textColorHint="@color/colorTextSecondary"
+        android:backgroundTint="@color/colorInputAccent"
+        app:layout_constraintStart_toStartOf="@+id/tvDataLanc"
+        app:layout_constraintTop_toBottomOf="@+id/tvDataLanc" />
+
+    <TextView
+        android:id="@+id/tvDataLanc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/data_lanc"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvValor"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <Button
+        android:id="@+id/btLancar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lan_ar_valor"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintStart_toStartOf="@+id/etData"
+        app:layout_constraintTop_toBottomOf="@+id/etData" />
+
+    <Button
+        android:id="@+id/btLancamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ver_lan_amentos"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintStart_toStartOf="@+id/btLancar"
+        app:layout_constraintTop_toBottomOf="@+id/btLancar" />
+
+    <Button
+        android:id="@+id/btSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/saldo"
+        app:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintStart_toStartOf="@+id/btLancamentos"
+        app:layout_constraintTop_toBottomOf="@+id/btLancamentos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

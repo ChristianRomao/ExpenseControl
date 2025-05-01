@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ExpenseControl</string>
+    <string name="valor">Valor</string>
+    <string name="detalhe">Detalhe</string>
+    <string name="tipo">Tipo</string>
+    <string name="insira_um_valor">Insira um valor</string>
+    <string name="tipo2">Tipo</string>
+    <string name="data_lan_amento">Data Lançamento</string>
+    <string name="data_lanc">Data Lanc.</string>
+    <string name="insira_uma_data">Insira uma data</string>
+    <string name="lan_ar_valor">Lançar valor</string>
+    <string name="ver_lan_amentos">Ver lançamentos</string>
+    <string name="saldo">Saldo</string>
+</resources>
