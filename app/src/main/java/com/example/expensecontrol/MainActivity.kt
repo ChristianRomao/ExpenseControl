@@ -1,5 +1,6 @@
 package com.example.expensecontrol
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -88,7 +89,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun btSaldoOnClick() {
         val saldoLancamentos = banco.calularSaldoLanc()
-        Toast.makeText(this, "Saldo atual de: R$ %.2f".format(saldoLancamentos), Toast.LENGTH_SHORT).show()
+
+        val builder = AlertDialog.Builder(this)
+
+        builder.setTitle("Saldo de seus Lançamentos.")
+        builder.setMessage("Saldo atual é de: R$ %.2f".format(saldoLancamentos))
+        builder.setCancelable(false)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
     private fun btLancamentosOnClick() {
